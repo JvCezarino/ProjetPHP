@@ -1,6 +1,11 @@
 <footer class="fixed-bottom bg-dark text-white d-flex align-items-center" style="height: 0,5cm;">
+        
         <div class="container text-center">
-            <p class="mb-0">&copy; <?php echo date("Y"); ?> Seu Nome ou Empresa. Todos os direitos reservados.</p>
+                <p class="mb-0">Aproveite o nosso site, <?php echo htmlspecialchars($nome); ?></p>
+        </div>
+
+        <div class="container text-center">
+                <p class="mb-0">&copy; <?php echo date("Y"); ?>Seu Nome ou Empresa. Todos os direitos reservados.</p>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
