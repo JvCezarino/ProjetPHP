@@ -1,4 +1,5 @@
 <?php
+include 'db.php';
 //Prepara pa gerenciar a sessão
 session_start();
 
@@ -6,6 +7,13 @@ session_start();
 if (!isset($_SESSION['email'])) {
     header("Location: index.php");
     exit();
+}
+
+//função para obter todos os produtos 
+function getProds() {
+    global $conn;
+    $result = $conn->query("SELECT * FROM produtos");
+    return $result->fetch_all(MYSQLI_ASSOC);
 }
 
 // Armazena informações do usuário
